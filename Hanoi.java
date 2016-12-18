@@ -10,7 +10,6 @@ public class Hanoi {
         }
     }
     public static void main(String[] args) {
-        int n = 3;
-        hanoi(n, "A", "B", "C");
+        hanoi(3, "A", "B", "C");
     }
-} 
+}
