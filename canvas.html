@@ -1,0 +1,25 @@
+<!-- 政大105數位資結 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Canvas</h2>
+        <canvas id="theCanvas" width="300" height="225" />
+        <script type="text/javascript">
+            var theCanvas = document.getElementById("theCanvas");
+            var context = theCanvas.getContext("2d");
+            context.beginPath();
+            context.moveTo(45,115);
+            context.lineTo(95,15);
+            context.lineTo(145,115);
+            context.closePath();
+            context.stroke();
+        </script>
+
+    </div>
+</body>
+</html>
