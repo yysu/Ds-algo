@@ -1,5 +1,5 @@
 public class Binarysearch {
-    //Iteractive版本
+    //imperative版本
     public static void main(String[] argv) {
         int[] array = { 1, 2, 3, 4, 5 };
         int key = 4;
