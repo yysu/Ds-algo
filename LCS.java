@@ -21,6 +21,9 @@ public class LCS {
             }
         }
         System.out.println("LCS的長度是" + array[s1.length - 1][s2.length - 1]);
+        System.out.println();
+
+        //印出矩陣
         for(int i = 0; i < s1.length; i++) {
             for(int j = 0; j < s2.length; j++) {
                 System.out.print(array[i][j] + " ");
