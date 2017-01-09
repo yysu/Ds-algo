@@ -28,6 +28,4 @@ public class LCS {
             System.out.println();
         }
     }
-    public static int max(int a, int b) {
-
 }
