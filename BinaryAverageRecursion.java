@@ -8,7 +8,7 @@ public class BinaryAverageRecursion {
             return A[start];
         }
         else if (n == 2) {
-            return (A[start] + A[start + 1]) /2;
+            return (A[start] + A[start + 1]) / 2;
         }
         else {
             double left, right;
@@ -27,4 +27,5 @@ public class BinaryAverageRecursion {
 
         }
     }
+
 }
