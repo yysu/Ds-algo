@@ -1,3 +1,4 @@
+//https://www.youtube.com/watch?v=7zuGmKfUt7s
 public class CountingSort {
     public static void main(String[] argv) {
         int[] array = { 1,4,1,2,7,5,2 };
@@ -20,7 +21,7 @@ public class CountingSort {
         //填入數字
         for (int i = 0; i < array.length; i++) {
             int temp = Count[array[i]] - 1;
-            Sort[temp] = array[i]; 
+            Sort[temp] = array[i];
             Count[array[i]]--;
         }
         print(Sort, Sort.length);
