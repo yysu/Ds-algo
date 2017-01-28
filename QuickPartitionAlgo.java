@@ -1,11 +1,28 @@
 public class QuickPartitionAlgo {
     public static void main(String[] argv) {
         int []A = { 9, 4, 2, 3, 6, 5, 7 };
+        int smallesti = 3;
         //排序前
         print(A);
+        //Find ith Smallest number
+        System.out.print("第" + smallesti + "小的數字為： ");
+        System.out.println(findSmallest(A, 0, A.length - 1, smallesti));
         QuickSort(A, 0, A.length - 1);
         //排序後
         print(A);
+
+
+    }
+    public static int findSmallest(int[] A, int p, int r, int i) {
+        int q = Partition(A, p, r);
+        int k = q - p + 1;
+        if(i == k) {
+            return A[q];
+        } else if (i < k) {
+            return findSmallest(A, p, q - 1, i);
+        } else {
+            return findSmallest(A, q + 1, r, i - k);
+        }
     }
     public static void QuickSort(int[] A, int p, int r) {
         if(p < r) {
