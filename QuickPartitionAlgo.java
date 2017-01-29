@@ -16,6 +16,7 @@ public class QuickPartitionAlgo {
     public static int findSmallest(int[] A, int p, int r, int i) {
         //Time Complexity : O(n)
         int q = Partition(A, p, r);
+        // q = pk為第 k 小的數
         int k = q - p + 1;
         if(i == k) {
             return A[q];
