@@ -40,26 +40,21 @@ public class QuickPartitionAlgo {
         for (int j = p; j <= r - 1; j++) {
             if(A[j] <= pk) {
                 i++;
+                //Swap(A[i], A[j]);
                 int temp = A[i];
                 A[i] = A[j];
                 A[j] = temp;
-                //Swap(A[i], A[j]);
             }
         }
+        //Swap(A[r], A[i + 1]);
         int temp = A[r];
         A[r] = A[i + 1];
         A[i + 1] = temp;
-        //Swap(A[r], A[i + 1]);
         return i + 1;
     }
     public static void print(int[] A) {
         for (int index : A)
             System.out.print(index + " ");
         System.out.println();
-    }
-    public static void Swap(int a, int b) {
-        int temp = a;
-        a = b;
-        b = temp;
     }
 }
