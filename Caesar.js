@@ -8,7 +8,7 @@ function Sub(Str) {
   if(Str == 32)
   	return Str;
   else
-	  return Str-3;
+    return Str-3;
 }
 
 function ToChar(Str) {
