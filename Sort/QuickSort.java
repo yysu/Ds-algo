@@ -1,4 +1,4 @@
-public class Quicksort {
+public class QuickSort {
     public static void main(String[] argv) {
         int[] array = { 20, 3, 4, 7, 15, 6, 2, 100, 1000, 32 };
         System.out.println("排序前:");
@@ -33,7 +33,7 @@ public class Quicksort {
             quick(array, L , j-1);
             quick(array, j + 1, U);
         }
-    } 
+    }
     public static void print(int[] array) {
         for(int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");

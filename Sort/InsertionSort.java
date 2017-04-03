@@ -1,4 +1,4 @@
-public class Insertion {
+public class InsertionSort {
     public static void main(String[] argv) {
         int[] array = { -10000000, 26,5,37,1,61,11,59,15,48,19};
         //排序前
@@ -31,5 +31,5 @@ public class Insertion {
         for(int i = 1;i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
-    } 
+    }
 }
