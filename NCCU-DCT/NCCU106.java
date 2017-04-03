@@ -1,3 +1,5 @@
+//政大數位106 考題
+//忘記哪一題了 再請發pull request給我
 public class NCCU106 {
     public static void main(String[] argv) {
         long n = 123456789;

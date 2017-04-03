@@ -1,10 +1,11 @@
-public class LCS {
+public class LCS_DP {
     public static void main(String[] argv) {
         int[] s1 = {0, 2, 5, 7, 9, 3, 1, 2};
         int[] s2 = {0, 3, 5, 3, 2, 8};
 
         int[][] array = new int[s1.length][s2.length];
-        /*
+        /*  DP規則
+
             LCS(s1, s2) =
             { max( LCS(sub1, s2), LCS(s1, sub2) ) , when e1 != e2
             { LCS(sub1, sub2) + e1                , when e1 == e2

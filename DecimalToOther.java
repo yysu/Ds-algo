@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class DecimalToBinary {
+public class DecimalToOther {
     public static void main(String[] argv) {
         //10進位轉2進位
         //忘了哪間學校
@@ -21,6 +21,7 @@ public class DecimalToBinary {
     public static String Reverse(String str) {
         return new StringBuilder(str).reverse().toString();
     }
+    
     //運用Stack做反轉[中央103]
     public static String decimalToOctal(int number) {
         String result = "";

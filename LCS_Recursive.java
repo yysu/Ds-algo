@@ -1,5 +1,5 @@
-public class LongestCommonSubsquence {
-	
+public class LCS_Recursive {
+
 	public static void main(String[] argv) {
 		char[] X = {'A','G','G','T','A','B'};
 		char[] Y = {'G','X','T','X','A','Y','B'};
