@@ -13,11 +13,37 @@
 
 ## Data Structure 實作
 1. Stack(C)
-2. Stack(C，使用linklist實作)
-3. LinkedList(Java)
+2. Stack(C，使用linkedlist實作)
+3. LinkedList
 4. LinkedList(C)
-5. BinaryTree(Java)
+5. BinaryTree
+
+## Matrix相關
+1. Matrix Multiply(c)
+2. Matrix Transpose
+
+## NCCU-DCT (政治大學-數位內容碩士學位學程)
+(待補充)
+
+## NCU (中央大學-資管所)
+(待補充)
+
+## NSYSU (中山大學-資管所)
+(待補充)
+
+## OO_practice(物件導向練習)
 
 ## Search
 1. BinarySearch(C)
-2. BinarySearch(Java)
+2. BinarySearch
+
+## Sort
+1. Bubble Sort
+2. Counting Sort
+3. Insertion Sort
+4. Merge Sort
+5. Quick Sort (2種)
+6. Selection Sort
+
+## Others algo
+(待整理)
