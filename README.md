@@ -18,4 +18,6 @@
 4. LinkedList(C)
 5. BinaryTree(Java)
 
-## 
+## Search
+1. BinarySearch(C)
+2. BinarySearch(Java)
