@@ -1,5 +1,4 @@
 public class Hanoi {
-
     public static void hanoi(int n, String from, String temp, String to) {
         if (n == 1) {
             System.out.println("move disc " + n + " from " + from + " to " + to);

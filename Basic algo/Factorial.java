@@ -6,15 +6,14 @@ public class Factorial {
         //Recursive版
         System.out.println(n + "! = " + factorial_Re(n));
     }
-    static int factorial(int n) {
+    public static int factorial(int n) {
         int ans = 1;
         for(int i = 1; i <= n; i++) {
             ans *= i;
         }
         return ans;
     }
-
-    static int factorial_Re(int n) {
+    public static int factorial_Re(int n) {
         if(n <= 0)
             return 1;
         else {
