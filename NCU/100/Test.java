@@ -7,12 +7,10 @@ class Employee {
     //Section B
     public Employee(String ID) {
         total_bonus = 0.0;
-        //?????
         this.ID = ID;
     }
     public Employee(String ID, Employee boss) {
         total_bonus = 0.0;
-        //?????
         this.ID = ID;
         this.boss = boss;
     }
@@ -20,7 +18,6 @@ class Employee {
         //Section C : 在此計算銷售線上各層人員的分紅
     public void addBonus(double value) {
         total_bonus += value * 0.1;
-        //????????
         if(this.boss != null)
             this.boss.addBonus(value * 0.1);
     }
