@@ -22,7 +22,7 @@ class Human extends Mammal {
         System.out.println("human walks");
     }
 }
-public class NSYU {
+public class NSYSU {
     public static void main(String[] argv) {
         Moveable m = new Mammal();
         //Mammal mv = (Mammal)m;
