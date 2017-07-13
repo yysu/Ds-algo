@@ -21,7 +21,7 @@ class BOB extends Alice{
         System.out.println(str);
     }
 }
-public class Ideone
+public class Object_oriented_practice
 {
     public static void main (String[] args) throws java.lang.Exception
     {
