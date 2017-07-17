@@ -56,7 +56,6 @@ public class BinaryAverageRecursion {
                 right = BinarySum(Array, i + n/2 , n/2 + 1);
                 return left + right;
             }
-
         }
     }
     public static int BinaryMul(int[] Array, int i, int n) {

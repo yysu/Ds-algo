@@ -1,5 +1,5 @@
 public class BinaryRecursiveArray {
-   public static int binaryRecursiveSum( int[] data, int low, int high )
+   public static int binaryRecursiveSum(int[] data, int low, int high)
    {
       if( low > high )
         return 0;
@@ -11,7 +11,7 @@ public class BinaryRecursiveArray {
         return binaryRecursiveSum(data, low, mid) + binaryRecursiveSum(data, mid+1, high);
       }
    }
-   public static int binaryRecursiveMul( int[] data, int low , int high)
+   public static int binaryRecursiveMul(int[] data, int low , int high)
    {
        if( low > high )
         return 1;
@@ -24,7 +24,7 @@ public class BinaryRecursiveArray {
    }
    public static void main(String[] args) {
 
-       int[] data =  {1,2,3,4,5};
+       int[] data =  {1, 2, 3, 4, 5};
 
        int sumResult = binaryRecursiveSum(data, 0, data.length-1);
        int mulResult = binaryRecursiveMul(data, 0, data.length-1);
