@@ -22,6 +22,11 @@
 1. Matrix Multiply(c)
 2. Matrix Transpose
 
+## NCCU-DCT
+ - 100
+    * 計概
+        Two(第二大題1.1、1.2)
+
 ## NCCU-DCT (政治大學-數位內容碩士學位學程)
 (待補充)
 
