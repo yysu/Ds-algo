@@ -56,3 +56,5 @@
 ## Others algo
 (待整理)
 有任何考資管研究所的問題也歡迎詢問我 ：）
+經驗分享：https://www.ptt.cc/bbs/graduate/M.1491030308.A.BED.html
+
