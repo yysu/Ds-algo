@@ -34,7 +34,21 @@
 (待補充)
 
 ## NCU (中央大學-資管所)
-(待補充)
+- 100
+    * 計概
+        1. Test(第十題)
+- 102
+    * 計概
+        1. Question1Test(第九題)
+        2. Question2、Question2_Solve(第十題第二小題)
+        3. 第十一題請參考Basic algo裡面的Binomial內 C_RE
+- 104
+    * 計概
+        1. Night(第九題)
+
+- 106
+    * 計概
+        1. Eight(第八題)
 
 ## NSYSU (中山大學-資管所)
 (待補充)

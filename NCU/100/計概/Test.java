@@ -45,8 +45,8 @@ public class Test {
         //Section G
         System.out.println(a1 + ":" + a1.getBonus() + "\n" +
                             a2 +  ":" + a2.getBonus() + "\n" +
-                             a3 + ":" + a3.getBonus() + "\n" +
-                              a4 + ":" + a4.getBonus() + "\n"
-                              );
+                            a3 + ":" + a3.getBonus() + "\n" +
+                            a4 + ":" + a4.getBonus() + "\n"
+                          );
     }
 }
