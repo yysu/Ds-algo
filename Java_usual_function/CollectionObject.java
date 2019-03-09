@@ -1,6 +1,8 @@
 import java.util.*;
 import java.util.TreeSet;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class CollectionObject {
     public static void main(String[] args) {
@@ -17,6 +19,10 @@ public class CollectionObject {
 
         testIterator(hashset);
         testIterator(treeset);
+
+        System.out.println("===================================");
+        System.out.println("Test ArrayList & LinkedList");
+        testArrayList();
     }
 
     public static void testIterator(Collection c) {
@@ -62,5 +68,40 @@ public class CollectionObject {
         s.add(537);
         s.add(537);
         System.out.println("Hash : " + s);
+    }
+
+    public static void testArrayList() {
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(5);
+        arrayList.add(8);
+        arrayList.add(10);
+        arrayList.add(15);
+        arrayList.add(6);
+        arrayList.add(5);
+        arrayList.add(64);
+        arrayList.add(3);
+        System.out.println("ArrayList : " + arrayList);
+        System.out.println("元素個數 : " + arrayList.size());
+        System.out.println("將索引為2的，用200取代");
+        arrayList.set(2, 200);
+        System.out.println("ArrayList : " + arrayList);
+        System.out.println("64的索引值 : " + arrayList.indexOf(64));
+        System.out.println("是否有58 : " + arrayList.contains(58));
+        System.out.println("是否有64 : " + arrayList.contains(64));
+        System.out.println("移除索引值0");
+        arrayList.remove(0);
+        System.out.println("ArrayList : " + arrayList);
+        System.out.println("最後一個5的索引值是 : " + arrayList.lastIndexOf(5));
+        System.out.println("索引值2是 : " + arrayList.get(2));
+        
+        System.out.print("Collections 排序 : ");
+        Collections.sort(arrayList);
+        System.out.print(arrayList);
+        System.out.println();
+
+        System.out.print("Collections 反轉 : ");
+        Collections.reverse(arrayList);
+        System.out.print(arrayList);
+        System.out.println();
     }
 }
