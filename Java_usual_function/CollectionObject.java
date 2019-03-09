@@ -22,7 +22,12 @@ public class CollectionObject {
 
         System.out.println("===================================");
         System.out.println("Test ArrayList & LinkedList");
+        System.out.println("ArrayList:");
         testArrayList();
+        System.out.println("");
+        System.out.println("");
+        System.out.println("LinkedList:");
+        testLinkedList();
     }
 
     public static void testIterator(Collection c) {
@@ -102,6 +107,48 @@ public class CollectionObject {
         System.out.print("Collections 反轉 : ");
         Collections.reverse(arrayList);
         System.out.print(arrayList);
+        System.out.println();
+    }
+
+    public static void testLinkedList() {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(5);
+        linkedList.add(8);
+        linkedList.add(10);
+        linkedList.add(15);
+        linkedList.add(6);
+        linkedList.add(5);
+        linkedList.add(64);
+        linkedList.add(3);
+        System.out.println("LinkedList : " + linkedList);
+        System.out.println("元素個數 : " + linkedList.size());
+        System.out.println("將索引為2的，用200取代");
+        linkedList.set(2, 200);
+        System.out.println("LinkedList : " + linkedList);
+        System.out.println("64的索引值 : " + linkedList.indexOf(64));
+        System.out.println("是否有58 : " + linkedList.contains(58));
+        System.out.println("是否有64 : " + linkedList.contains(64));
+        System.out.println("移除索引值0");
+        linkedList.remove(0);
+        System.out.println("LinkedList : " + linkedList);
+        System.out.println("最後一個5的索引值是 : " + linkedList.lastIndexOf(5));
+        System.out.println("索引值2是 : " + linkedList.get(2));
+        System.out.println("LinkedList 加 1000 到最前面" );
+        linkedList.addFirst(1000);
+        System.out.println("LinkedList : " + linkedList);
+        System.out.println("LinkedList 加 3456 到最後面" );
+        linkedList.addLast(3456);
+        System.out.println("LinkedList : " + linkedList);
+
+        
+        System.out.print("Collections 排序 : ");
+        Collections.sort(linkedList);
+        System.out.print(linkedList);
+        System.out.println();
+
+        System.out.print("Collections 反轉 : ");
+        Collections.reverse(linkedList);
+        System.out.print(linkedList);
         System.out.println();
     }
 }
