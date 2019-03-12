@@ -139,6 +139,17 @@ class StackLinkedListDemo {
         }
         return -1;
     }
+
+    @Override
+    public String toString() {
+        String result = "";
+        Node temp = this.top;
+        while(temp != null) {
+            result += temp.val + " ";
+            temp = temp.next;
+        }
+        return result;
+    } 
 }
 
 class StackArrayDemo {
