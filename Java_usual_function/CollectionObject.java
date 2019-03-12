@@ -28,6 +28,15 @@ public class CollectionObject {
         System.out.println("");
         System.out.println("LinkedList:");
         testLinkedList();
+
+        System.out.println("===================================");
+        System.out.println("Test HashMap & TreeMap");
+        System.out.println("HashMap:");
+        testHashMap();
+        System.out.println("");
+        System.out.println("");
+        System.out.println("TreeMap:");
+        testTreeMap();
     }
 
     public static void testIterator(Collection c) {
@@ -37,7 +46,7 @@ public class CollectionObject {
             System.out.print(obj  + " ");
         }
         System.out.println();
-    } 
+    }
 
     public static void testSet(Set<Integer> s) {
         System.out.println("Hash empty : " + s.isEmpty());
@@ -98,6 +107,13 @@ public class CollectionObject {
         System.out.println("ArrayList : " + arrayList);
         System.out.println("最後一個5的索引值是 : " + arrayList.lastIndexOf(5));
         System.out.println("索引值2是 : " + arrayList.get(2));
+
+        ListIterator litr1 = arrayList.listIterator(arrayList.size());
+        System.out.print("反向列出 ArrayList 內容:");
+        while (litr1.hasPrevious()) {
+            System.out.print(litr1.previous() + " "); //反向走訪元素
+        }
+        System.out.println();
         
         System.out.print("Collections 排序 : ");
         Collections.sort(arrayList);
@@ -140,6 +156,19 @@ public class CollectionObject {
         linkedList.addLast(3456);
         System.out.println("LinkedList : " + linkedList);
 
+        ListIterator litr1 = linkedList.listIterator(linkedList.size());
+        System.out.print("反向列出 LinkedList 內容:");
+        while (litr1.hasPrevious()) {
+            System.out.print(litr1.previous() + " "); //反向走訪元素
+        }
+        System.out.println();
+
+        ListIterator litr2 = linkedList.listIterator();
+        System.out.print("正向列出 LinkedList 內容:");
+        while (litr2.hasNext()) {
+            System.out.print(litr2.next() + " "); //正向走訪元素
+        }
+        System.out.println();
         
         System.out.print("Collections 排序 : ");
         Collections.sort(linkedList);
@@ -150,5 +179,45 @@ public class CollectionObject {
         Collections.reverse(linkedList);
         System.out.print(linkedList);
         System.out.println();
+    }
+
+    public static void testHashMap() {
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(102210, "Su,Jim");
+        hashMap.put(104213, "Yeh,Chang");
+        hashMap.put(103287, "Chiu,Lou");
+
+        System.out.println("元素個數 : " + hashMap.size());
+        System.out.println("HashMap 內元素 : " + hashMap);
+        System.out.print("HashMap 內是否有關鍵值 102210 : ");
+        System.out.println(hashMap.containsKey(102210));
+        System.out.print("HashMap 內是否有對應值 Su,Jim : ");
+        System.out.println(hashMap.containsValue("Su,Jim"));
+
+        hashMap.remove(104213);
+
+        System.out.println("元素個數 : " + hashMap.size());
+        System.out.println("HashMap 內元素 : " + hashMap);
+        System.out.println("關鍵值 102210 的對應值 : " + hashMap.get(102210));
+    }
+
+    public static void testTreeMap() {
+        TreeMap<Integer, String> treeMap = new TreeMap<>();
+        treeMap.put(102210, "Su,Jim");
+        treeMap.put(104213, "Yeh,Chang");
+        treeMap.put(103287, "Chiu,Lou");
+
+        System.out.println("元素個數 : " + treeMap.size());
+        System.out.println("TreeMap 內元素 : " + treeMap);
+        System.out.print("TreeMap 內是否有關鍵值 102210 : ");
+        System.out.println(treeMap.containsKey(102210));
+        System.out.print("TreeMap 內是否有對應值 Su,Jim : ");
+        System.out.println(treeMap.containsValue("Su,Jim"));
+
+        treeMap.remove(104213);
+
+        System.out.println("元素個數 : " + treeMap.size());
+        System.out.println("TreeMap 內元素 : " + treeMap);
+        System.out.println("關鍵值 102210 的對應值 : " + treeMap.get(102210));
     }
 }
