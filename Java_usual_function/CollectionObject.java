@@ -194,6 +194,15 @@ public class CollectionObject {
         System.out.print("HashMap 內是否有對應值 Su,Jim : ");
         System.out.println(hashMap.containsValue("Su,Jim"));
 
+        System.out.print("HashMap 測試 getOrDefault(102210, \"Not Exist\") : ");
+        System.out.println(hashMap.getOrDefault(102210, "Not Exist"));
+        System.out.print("HashMap 測試 getOrDefault(102222, \"Not Exist\") : ");
+        System.out.println(hashMap.getOrDefault(102222, "Not Exist"));
+        
+        System.out.println("HashMap 測試 putIfAbsent(key, value) : ");
+        hashMap.putIfAbsent(102222, "New Value");
+        hashMap.putIfAbsent(102222, "New Value");
+
         hashMap.remove(104213);
 
         System.out.println("元素個數 : " + hashMap.size());
@@ -213,6 +222,16 @@ public class CollectionObject {
         System.out.println(treeMap.containsKey(102210));
         System.out.print("TreeMap 內是否有對應值 Su,Jim : ");
         System.out.println(treeMap.containsValue("Su,Jim"));
+
+        System.out.print("TreeMap 測試 getOrDefault(102210, \"Not Exist\") : ");
+        System.out.println(treeMap.getOrDefault(102210, "Not Exist"));
+        System.out.print("TreeMap 測試 getOrDefault(102222, \"Not Exist\") : ");
+        System.out.println(treeMap.getOrDefault(102222, "Not Exist"));
+        
+        System.out.print("TreeMap 測試 putIfAbsent(102222, New Value) : ");
+        System.out.println(treeMap.putIfAbsent(102222, "New Value"));
+        System.out.print("TreeMap 測試 putIfAbsent(102222, New Value) : ");
+        System.out.println(treeMap.putIfAbsent(102222, "New Value"));
 
         treeMap.remove(104213);
 
