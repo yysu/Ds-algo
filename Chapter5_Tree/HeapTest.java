@@ -21,44 +21,46 @@ public class HeapTest {
     static int deleteMax(int[] heap, int heapLength) {
         int value = heap[0];
         heap[0] = heap[heapLength-1];
-        adjust(heap, 0, heapLength-1);
+        heapify(heap, 0, heapLength-1);
         return value;
     }
 
     static void heapSort(int[] heap, int n) {
-        // for (int i = n-1; i >= 0; i--) {
-        //     int temp = heap[i];
-        //     heap[i] = heap[0];
-        //     heap[0] = temp;
+        for (int i = n-1; i >= 0; i--) {
+            int temp = heap[i];
+            heap[i] = heap[0];
+            heap[0] = temp;
 
-        //     adjust(heap, 0, i+1);
-        //     for (int val : heap) {
-        //         System.out.print(val + " ");
-        //     }
-        //     System.out.println();
-        // }
+            heapify(heap, 0, i);
+        }
     }
 
-    static void adjust(int[] heap, int i, int heapLength) {
-        int temp = heap[i];  //暫存heap[i]
-        int j = 2*i;         //j的初值 = i的左子點
-        
-        while (j <= heapLength) {
-            if (j < heapLength) {
-                if (heap[j] < heap[j+1]) j = j+1; //此時的j為 max{左子點，右子點}
-                if (temp >= heap[j]) break; //表示不用交換
-                else {
-                    heap[j/2] = heap[j]; //上移至父點
-                    j = 2*j;
-                }
-            }
-        }
-        heap[j/2] = temp;
+    static void heapify(int[] arr, int i, int n) {
+        int largest = i; // Initialize largest as root 
+        int l = 2*i; // left = 2*i + 1 
+        int r = 2*i+1; // right = 2*i + 2 
+  
+        // If left child is larger than root 
+        if (l < n && arr[l] > arr[largest]) 
+            largest = l; 
+  
+        // If right child is larger than largest so far 
+        if (r < n && arr[r] > arr[largest]) 
+            largest = r; 
+  
+        // If largest is not root 
+        if (largest != i) { 
+            int swap = arr[i]; 
+            arr[i] = arr[largest]; 
+            arr[largest] = swap; 
+  
+            // Recursively heapify the affected sub-tree 
+            heapify(arr, largest, n); 
+        } 
     }
 
-    static void createHeap(int[] heap, int heapLength) {
-        for (int j = heapLength/2-1; j >= 0; j--) {
-            adjust(heap, j, heapLength);
-        }
+    static void createHeap(int[] arr, int n) {
+        for (int i = n / 2 - 1; i >= 0; i--) 
+            heapify(arr, i, n); 
     }
 }
