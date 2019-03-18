@@ -18,7 +18,10 @@ public class SortTest {
 
         unsortedArray = new int[]{15, 8, 4, 34, 6, 22, 46, 100, 1};
 
-        
+        quickSort(unsortedArray, 0, unsortedArray.length-1);
+        printArray(unsortedArray, unsortedArray.length);
+
+        unsortedArray = new int[]{15, 8, 4, 34, 6, 22, 46, 100, 1};
     }
 
     public static void insertionSort(int[] arr) {
@@ -60,6 +63,34 @@ public class SortTest {
         }
     }
     
+    public static void quickSort(int[] arr, int m, int n) {
+        if (m < n) {
+            int pivot = arr[m];
+            int i = m;
+            int j = n+1;
+
+            while (i < j) {
+                do {
+                    i++;
+                } while (arr[i] < pivot);
+
+                do {
+                    j--;
+                } while (arr[j] > pivot);
+
+                if (i < j) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            int temp = arr[m];
+            arr[m] = arr[j];
+            arr[j] = temp;
+            quickSort(arr, m, j-1);
+            quickSort(arr, j+1, n);
+        }
+    }
 
     public static void printArray(int[] arr, int n) {
         for (int i = 0; i < n; i++) {
