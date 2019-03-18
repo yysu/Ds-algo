@@ -12,6 +12,13 @@ public class SortTest {
         printArray(unsortedArray, unsortedArray.length);
 
         unsortedArray = new int[]{15, 8, 4, 34, 6, 22, 46, 100, 1};
+
+        bubbleSort(unsortedArray);
+        printArray(unsortedArray, unsortedArray.length);
+
+        unsortedArray = new int[]{15, 8, 4, 34, 6, 22, 46, 100, 1};
+
+        
     }
 
     public static void insertionSort(int[] arr) {
@@ -40,6 +47,19 @@ public class SortTest {
             arr[min] = temp;
         }
     }
+
+    public static void bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j+1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    }
+    
 
     public static void printArray(int[] arr, int n) {
         for (int i = 0; i < n; i++) {
